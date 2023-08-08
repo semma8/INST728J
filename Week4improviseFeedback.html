@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<style>
+    body {
+
+        background-image: url("bg2.gif");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg {
+
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header-container header {
+        background-color: white;
+        padding: 15 px;
+    }
+
+    .main-container {
+        height: 380px;
+        width: 850px;
+        background-color: aqua
+    }
+
+    nav {
+        float: left;
+        width: 230px;
+        height: 500px;
+        padding: 20px;
+        background-image: url("bg1.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: yellow;
+    }
+
+
+    nav ul li a {
+        color: gold;
+
+    }
+
+    ul {
+        list-style-image: url("arrow.gif");
+    }
+
+    .body-container {
+        height: 350px;
+        width: 500px;
+        background-color: beige;
+        float: right;
+        padding-bottom: 10px;
+        padding-top: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+
+    }
+
+    .form-container {
+        height: 325px;
+        width: 500px;
+        background: lavenderblush;
+        border: black;
+        float: right;
+
+    }
+
+    h4 {
+        color: darkred;
+    }
+
+    nav {
+        float: left;
+        width: 230px;
+        height: 340px;
+        padding: 20px;
+        background-image: url("bg1.gif");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: yellow;
+    }
+
+    .footer {
+        background-color: white;
+        padding: 5px;
+        text-align: center;
+        width: auto;
+        border-color: darkred;
+        border-width: thick;
+    }
+
+</style>
+
+<head>
+
+
+    <div class="header-container">
+        <header>
+            <img src=umd_logo.png alt="UMD Logo" width="300" height="50" />
+        </header>
+    </div>
+
+    <title>Form Validation</title>
+    <script type="text/javascript">
+        function validate() {
+
+            if (document.myForm.CaseID.value == "") {
+                alert("Please provide your CaseID number.");
+                document.myForm.CaseID.focus();
+                return false;
+            }
+            
+            if (document.myForm.Subject.value == "") {
+                alert("Please provide your Subject.");
+                document.myForm.Subject.focus();
+                return false;
+            }
+            
+              
+            if (document.myForm.Comments.value == "") {
+                alert("Please provide your Comments.");
+                document.myForm.Comments.focus();
+                return false;
+            }
+            
+            return (true);
+        }
+
+    </script>
+
+</head>
+
+<body font-family: Helvetica, sans-serif;>
+
+
+    <div class="main-container">
+
+        <div class="container">
+
+
+
+
+            <div class="menu-container">
+                <nav>
+                    <ul>
+
+                        <li><a href="#">Payroll Information</a></li>
+                        <li><a href="#">Leave Management</a></li>
+                        <li><a href="#">Performance Appraisal</a></li>
+                        <li><a href="#">TimeSheet</a></li>
+                        <li><a href="#">Health Benefits</a></li>
+                        <li><a href="#">Oranization Chart</a></li>
+                        <li><a href="#">Access Management</a></li>
+                        <li><a href="#">Career Development</a></li>
+                        <li><a href="#">My Profile</a></li>
+                        <li><a href="#">Expense Reimbursement</a></li>
+                        <li><a href="#">Retirement Planning</a></li>
+                        <li><a href="#">Ticket Management</a></li>
+                        <li><a href="#">Documents</a></li>
+                        <li><a href="#">Feedback</a></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="body-container">Please complete the following form
+
+                <div class="form-container">
+
+
+                    <table>
+
+
+                        <form name="myForm" action="thank you.html" onsubmit="return(validate());">
+                            <tr height=20px>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    <h4>FEEDBACK</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td> <label for="CaseID:"> CaseID:</label>
+                                </td>
+                                <td> <input type="text" name="CaseID" placeholder="CaseID"/>
+                                </td><br>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td><label for="Subject:*">Subject:*</label>
+                                </td>
+                                <td> <input type="text" name="Subject" textarea cols="40" rows="1" placeholder="Subject"/>
+                                </td>
+                                <br>
+                            </tr>
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td valign=top><label>Comments:*</label></td>
+                                <td>
+                                    <textarea cols="20" rows="8"  name="Comments"  placeholder="Enter Your Comments" ></textarea>
+                                </td><br>
+
+                            </tr>
+
+                            <br>
+
+                            <tr>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td>
+                                    &nbsp;
+                                </td>
+                                <td><input type="image" src=btn_submit.gif alt="Submit" value="Submit" /></td>
+
+                            </tr>
+
+                        </form>
+
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+<div class="footer" align="center">
+    <p>Copyright@UMD. All rights reserved.</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+</html>
